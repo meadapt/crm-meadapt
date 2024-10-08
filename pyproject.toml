@@ -1,0 +1,4 @@
+[tool.taskipy.tasks]
+devserver = { cmd = "python manage.py runserver", help = "Liga o servidor local de desenvolvimento django." }
+makemigrations = { cmd = "python manage.py makemigrations", help = "Cria arquivos de migração." }
+migrate = { cmd = "python manage.py migrate", help = "Aplica modificações previstas nas migrações no banco de dados." }

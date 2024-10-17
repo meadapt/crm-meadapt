@@ -19,15 +19,31 @@ class Venda(models.Model):
     cliente = models.ForeignKey('Cliente',
                                  on_delete=models.CASCADE,
                                  )
+    def __str__(self):
+        return f'{self.loja} - {self.vendedor} - {self.produto}'
 
 class Loja(models.Model):
-    pass 
+    nome = models.CharField(max_length=50)
+    
+    def __str__(self):
+        return f'{self.nome}'
 
 class Vendedor(models.Model):
-    pass
+    nome = models.CharField(max_length=50)
+
+    def __str__(self):
+        return f'{self.nome}'
 
 class Produto(models.Model):
-    pass
+    nome = models.CharField(max_length=50)
+    valor_unitario = models.FloatField(validators = [MinValueValidator(0.01)])
+
+    def __str__(self):
+        return f'{self.nome}'
 
 class Cliente(models.Model):
-    pass
+    nome = models.CharField(max_length=50)
+    numero_fiscal = models.CharField(max_length=50)
+
+    def __str__(self):
+        return f'{self.nome}'

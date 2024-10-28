@@ -1,6 +1,6 @@
 # CRM Me Adapt
 
-Neste repositório construímos um modelo simples de CRM para controlar vendas de uma empresa como execício de como fazer um projeto Django.
+Neste repositório construímos um modelo simples de CRM para controlar vendas de uma empresa fictícia. o bjetivo era criar um painel de administração utilizando o framework Django para tal.
 
 Confira no nosso [canal do Youtube](https://www.youtube.com/@me-adapt) o passo a passo desse projeto e faça junto com a gente!
 
@@ -8,7 +8,7 @@ Confira no nosso [canal do Youtube](https://www.youtube.com/@me-adapt) o passo a
 
 - Clonar repositório
 ```$
-git clone https://github.com/automatiza-mg/aura.git
+git clone https://github.com/meadapt/mostrando-raiane-quiz-mkdocs-meadapt.git
 ```
 
 - Criar ambiente virtual python e instalar pacotes

@@ -1,6 +1,6 @@
 # CRM Me Adapt
 
-Neste repositório construímos um modelo simples de CRM para controlar vendas de uma empresa fictícia. o bjetivo era criar um painel de administração utilizando o framework Django para tal.
+Neste repositório construímos um modelo simples de CRM para controlar vendas de uma empresa fictícia. O objetivo era criar um painel de administração utilizando o framework Django para tal.
 
 Confira no nosso [canal do Youtube](https://www.youtube.com/@me-adapt) o passo a passo desse projeto e faça junto com a gente!
 
@@ -18,7 +18,7 @@ $ python -m venv venv
 $ source venv/Scripts/activate
 $ pip install -r requirements.txt
 ```
-
+- Entre em [contato](faleconosco@meadapt.com) com a gente e peça o arquivo `.env`
 - Rodar migrações
 
 ```python

@@ -9,8 +9,8 @@ def create_users(apps, schema_editor):
     User = get_user_model()
     load_dotenv()
     password = os.environ.get('ALUNO_PWD')
-    username = 'aluno-meadapt'
-    email = 'aluno-meadapt@meadapt.com'
+    username = os.environ.get('USERNAME')
+    email = os.environ.get('EMAIL_ALUNO')
 
     if not User.objects.filter(username=username).exists():
             User.objects.create_superuser(

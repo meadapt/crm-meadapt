@@ -31,7 +31,7 @@ $ python manage.py migrate
 $ python manage.py createsuperuser
 ```
 
-- Ligar o servidor
+- Ligar o servidor:
 
 ```python
 $ $ python manage.py runserver

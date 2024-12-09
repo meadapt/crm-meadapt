@@ -1,3 +1,4 @@
+ipdb==0.13.13
 Django==5.1.4
 taskipy==1.13.0
 python-dotenv==1.0.1
@@ -6,3 +7,4 @@ dj-database-url==2.3.0
 whitenoise[brotli]==6.8.2
 gunicorn==23.0.0
 uvicorn==0.32.0
+supabase-py==0.0.2

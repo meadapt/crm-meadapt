@@ -16,4 +16,4 @@ jobs:
       env:
         GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}
       with:
-        filename: .github/supabase_workflow_failure.md
+        filename: .github/render_workflow_failure.md

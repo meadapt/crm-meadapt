@@ -9,11 +9,11 @@ jobs:
   keep_alive:
     runs-on: ubuntu-latest
     steps:
-      - name: Send request to keep Render alive
-        run: |
-          curl -s -o /dev/null -w "%{http_code}" https://crm-meadapt.onrender.com/admin/login/\?next\=/admin/
-        if: failure()
-        env:
-          GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}
-        with:
-          filename: .github/supabase_workflow_failure.md
+    - name: Send request to keep Render alive
+      run: |
+        curl -s -o /dev/null -w "%{http_code}" https://crm-meadapt.onrender.com/admin/login/\?next\=/admin/
+      if: failure()
+      env:
+        GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}
+      with:
+        filename: .github/supabase_workflow_failure.md

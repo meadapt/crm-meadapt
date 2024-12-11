@@ -3,6 +3,7 @@ name: Supabase call
 on:
   schedule:
     - cron: '@weekly'
+  workflow_dispatch:
 
 
 jobs:
@@ -15,6 +16,8 @@ jobs:
       run: |
         pip install -r requirements.txt
         python scripts/supabase_api.py
+    - name: Workflow failure notification
+      uses: JasonEtco/create-an-issue@v2
       if: failure()
       env:
         GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}

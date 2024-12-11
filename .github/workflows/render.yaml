@@ -10,7 +10,10 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - name: Send request to keep Render alive
-      run: curl -s -o /dev/null -w "%{http_code}" https://crm-meadapt.onrender.com/admin/login/\?next\=/admin/
+      run: |
+        curl -s -o /dev/null -w "%{http_code}" https://crm-meadapt.onrender.com/admin/login/\?next\=/admin/
+    - name: Workflow failure notification
+      uses: JasonEtco/create-an-issue@v2
       if: failure()
       env:
         GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}

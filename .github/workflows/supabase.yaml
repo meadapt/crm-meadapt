@@ -13,6 +13,9 @@ jobs:
     - name: Checkout repo
       uses: actions/checkout@v3
     - name: Call supabase
+      env:
+        SUPABASE_URL: ${{ secrets.SUPABASE_URL }}
+        SUPABASE_KEY: ${{ secrets.SUPABASE_KEY }}
       run: |
         pip install -r requirements.txt
         python scripts/supabase_api.py

@@ -9,6 +9,13 @@ def create_lojas(apps, schema_editor):
             nome=nome,
             )
 
+def create_cliente(apps, schema_editor):
+    for cliente in range(1,4):
+        Cliente.objects.create(
+            nome=f'Cliente 0{cliente}',
+            numero_fiscal=f'0000000000{cliente}',
+        )
+
 
 class Migration(migrations.Migration):
 
@@ -17,5 +24,6 @@ class Migration(migrations.Migration):
     ]
 
     operations = [
-        migrations.RunPython(create_users),
+        migrations.RunPython(create_lojas),
+        migrations.RunPython(create_cliente)
     ]
